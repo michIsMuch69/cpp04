@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jedusser <jedusser@student.42.fr>          +#+  +:+       +#+        */
+/*   By: michismuch <michismuch@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 20:21:38 by michismuch        #+#    #+#             */
-/*   Updated: 2025/03/11 11:51:03 by jedusser         ###   ########.fr       */
+/*   Updated: 2025/03/11 17:19:49 by michismuch       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int main()
     const Animal* dog = new Dog();
     const Animal* cat = new Cat();
 
-    std::cout << dog->getType() << std::endl;
-    std::cout << cat->getType() << std::endl;
+    std::cout << "type in dog class is : " <<  dog->getType() << std::endl;
+    std::cout << "type in cat class is : " << cat->getType() << std::endl;
     cat->makeSound();  // Cat soun
     dog->makeSound();  // dog sound
     meta->makeSound(); // animal sound

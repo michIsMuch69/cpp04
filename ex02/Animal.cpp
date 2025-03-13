@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: michismuch <michismuch@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jedusser <jedusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/10 16:20:43 by michismuch        #+#    #+#             */
-/*   Updated: 2025/03/11 17:10:59 by michismuch       ###   ########.fr       */
+/*   Created: 2025/03/13 13:07:38 by jedusser          #+#    #+#             */
+/*   Updated: 2025/03/13 13:07:41 by jedusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

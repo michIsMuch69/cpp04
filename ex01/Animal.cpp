@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: michismuch <michismuch@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jedusser <jedusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/10 15:52:25 by michismuch        #+#    #+#             */
-/*   Updated: 2025/03/11 16:25:12 by michismuch       ###   ########.fr       */
+/*   Created: 2025/03/13 13:06:46 by jedusser          #+#    #+#             */
+/*   Updated: 2025/03/13 13:06:47 by jedusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+
 
 #include "Animal.hpp"
 
@@ -41,7 +41,7 @@ Animal & Animal::operator=(const Animal &other)
 
 std::string Animal::getType() const
 {
-    return this->_type;
+    return _type;
 }
 
 void Animal::makeSound() const

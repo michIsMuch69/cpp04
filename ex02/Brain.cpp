@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: michismuch <michismuch@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jedusser <jedusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/10 16:21:18 by michismuch        #+#    #+#             */
-/*   Updated: 2025/03/11 17:11:55 by michismuch       ###   ########.fr       */
+/*   Created: 2025/03/13 13:07:52 by jedusser          #+#    #+#             */
+/*   Updated: 2025/03/13 13:07:55 by jedusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,17 @@ Brain &Brain::operator=(const Brain &other)
 Brain::~Brain()
 {
     std::cout << "Brain: Destructor called" << std::endl;
+}
+
+void Brain::setIdea(int index, const std::string& idea)
+{
+    if (index >= 0 && index < 100)
+        ideas[index] = idea;
+}
+
+std::string Brain::getIdea(int index) const
+{
+    if (index >= 0 && index < 100)
+        return ideas[index];
+    return "";
 }

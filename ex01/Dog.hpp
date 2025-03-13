@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: michismuch <michismuch@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jedusser <jedusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/10 15:53:27 by michismuch        #+#    #+#             */
-/*   Updated: 2025/03/11 17:00:04 by michismuch       ###   ########.fr       */
+/*   Created: 2025/03/13 13:07:28 by jedusser          #+#    #+#             */
+/*   Updated: 2025/03/13 13:07:29 by jedusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #ifndef DOG_HPP
 #define DOG_HPP
@@ -16,17 +18,22 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Dog : public Animal {
-private:
-    Brain* brain;
-public:
-    Dog();
-    Dog(const Dog &other);
-    Dog &operator=(const Dog &other);
-    virtual ~Dog();
+class Dog : public Animal
+{
+    private:
+        Brain* brain;
+    public:
+        Dog();
+        Dog(const Dog &other);
+        Dog &operator=(const Dog &other);
+        virtual ~Dog();
 
-    virtual void makeSound() const;
+        virtual void makeSound() const;
+
+        void setBrainIdea(int index, const std::string& idea);
+        std::string getBrainIdea(int index) const;
 };
 
 #endif
+
 

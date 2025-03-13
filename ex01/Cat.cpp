@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: michismuch <michismuch@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jedusser <jedusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/10 15:54:02 by michismuch        #+#    #+#             */
-/*   Updated: 2025/03/11 17:04:28 by michismuch       ###   ########.fr       */
+/*   Created: 2025/03/13 13:07:09 by jedusser          #+#    #+#             */
+/*   Updated: 2025/03/13 13:07:11 by jedusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "Cat.hpp"
 
 #include "Cat.hpp"
 
@@ -24,7 +22,10 @@ Cat::Cat() : Animal()
 Cat::Cat(const Cat &other) : Animal(other)
 {
     std::cout << "Cat: Copy constructor called" << std::endl;
-    brain = other.brain ? new Brain(*other.brain) : NULL;
+    if (other.brain)
+        brain = new Brain(*other.brain);
+    else
+        brain = NULL;
 }
 
 Cat &Cat::operator=(const Cat &other)
@@ -35,7 +36,10 @@ Cat &Cat::operator=(const Cat &other)
         Animal::operator=(other);
         if (brain)
             delete brain;
-        brain = other.brain ? new Brain(*other.brain) : NULL;
+        if (other.brain)
+            brain = new Brain(*other.brain);
+        else
+            brain = NULL;
     }
     return *this;
 }
@@ -51,3 +55,15 @@ void Cat::makeSound() const
     std::cout << "Meow!" << std::endl;
 }
 
+void Cat::setBrainIdea(int index, const std::string& idea)
+{
+    if (brain)
+        brain->setIdea(index, idea);
+}
+
+std::string Cat::getBrainIdea(int index) const
+{
+    if (brain)
+        return brain->getIdea(index);
+    return "";
+}

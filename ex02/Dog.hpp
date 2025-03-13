@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: michismuch <michismuch@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jedusser <jedusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/10 16:22:26 by michismuch        #+#    #+#             */
-/*   Updated: 2025/03/11 17:13:00 by michismuch       ###   ########.fr       */
+/*   Created: 2025/03/13 13:08:23 by jedusser          #+#    #+#             */
+/*   Updated: 2025/03/13 13:08:25 by jedusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ class Dog : public Animal
         virtual ~Dog();
 
         virtual void makeSound() const;
+
+        void setBrainIdea(int index, const std::string& idea);
+        std::string getBrainIdea(int index) const;
 };
 
 #endif

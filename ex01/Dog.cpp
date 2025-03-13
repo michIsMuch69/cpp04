@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: michismuch <michismuch@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jedusser <jedusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/10 15:53:40 by michismuch        #+#    #+#             */
-/*   Updated: 2025/03/11 17:04:56 by michismuch       ###   ########.fr       */
+/*   Created: 2025/03/13 13:07:22 by jedusser          #+#    #+#             */
+/*   Updated: 2025/03/13 13:07:25 by jedusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ Dog::Dog() : Animal()
 Dog::Dog(const Dog &other) : Animal(other)
 {
     std::cout << "Dog: Copy constructor called" << std::endl;
-    brain = other.brain ? new Brain(*other.brain) : NULL;
+    if (other.brain)
+        brain = new Brain(*other.brain);
+    else
+        brain = NULL;
 }
 
 Dog &Dog::operator=(const Dog &other)
@@ -33,7 +36,10 @@ Dog &Dog::operator=(const Dog &other)
         Animal::operator=(other);
         if (brain)
             delete brain;
-        brain = other.brain ? new Brain(*other.brain) : NULL;
+        if (other.brain)
+            brain = new Brain(*other.brain);
+        else
+            brain = NULL;
     }
     return *this;
 }
@@ -48,4 +54,18 @@ void Dog::makeSound() const
 {
     std::cout << "Woof! Woof!" << std::endl;
 }
+
+void Dog::setBrainIdea(int index, const std::string& idea)
+{
+    if (brain)
+        brain->setIdea(index, idea);
+}
+
+std::string Dog::getBrainIdea(int index) const
+{
+    if (brain)
+        return brain->getIdea(index);
+    return "";
+}
+
 

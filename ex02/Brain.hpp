@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: michismuch <michismuch@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jedusser <jedusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/10 16:21:34 by michismuch        #+#    #+#             */
-/*   Updated: 2025/03/11 17:12:11 by michismuch       ###   ########.fr       */
+/*   Created: 2025/03/13 13:07:58 by jedusser          #+#    #+#             */
+/*   Updated: 2025/03/13 13:08:03 by jedusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef BRAIN_HPP
 #define BRAIN_HPP
@@ -26,6 +25,8 @@ class Brain
         ~Brain();
 
         std::string ideas[100];
+        void setIdea(int index, const std::string& idea);
+        std::string getIdea(int index) const;
 };
 
 #endif
